@@ -3,11 +3,12 @@ import styles from './BuildControls.module.css'
 import BuildControl from "./BuildControl/BuildControl";
 
 const controls = [
-  { label: 'Salad' , type: 'salad'},
-  { label: 'Cheese' , type: 'cheese'},
-  { label: 'Meat' , type: 'meat'},
-  { label:'Bacon' , type: 'bacon'},
-] 
+   { label: 'Meat' , type: 'meat'},
+   { label: 'Cheese' , type: 'cheese'},
+   { label: 'Salad' , type: 'salad'},
+   { label: 'Bacon' , type: 'bacon'},
+];
+
 const buildControls =(props)=> (
        <div className={styles.BuildControls}>
           <p>Current Price:<strong> {props.price.toFixed(2)}</strong></p>
@@ -23,11 +24,8 @@ const buildControls =(props)=> (
          <button
           className={styles.OrderButton}
           disabled={!props.purchasable} 
-          onClick={props.ordered}
-         >
-           ORDER NOW</button>
+          onClick={props.ordered}>ORDER NOW</button>
        </div> 
     );
 
- 
 export default buildControls;
